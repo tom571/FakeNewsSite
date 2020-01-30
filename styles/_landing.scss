@@ -1,0 +1,111 @@
+html {
+    background-color: #202226;
+    overflow-x: hidden;
+    font-family: lato, sans-serif;
+}
+
+.grid-container {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0fr 4fr 1fr 0.1fr 0.4fr;
+    grid-template-areas: 
+    "header header header"
+    "hero hero hero"
+    "main main main"
+    "footer footer footer";
+    height: 100vh;
+    margin: -10px;
+    
+}
+
+.header {
+    grid-area: header;
+}
+
+.hero {
+    min-height: 50vh; //stops resize malarky 
+    grid-area: hero;
+    background-image: linear-gradient(rgba(53, 57, 61, 0.8), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1552931773-ab388478c964?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: -999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: 2.5em;
+        color: #ffff;
+        font-weight: 100;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    button {
+        display: block;
+        width: 30%;
+
+        background-color: Transparent;
+        
+        /* Padding and margins */
+        padding: 1em;
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 600;
+        font-size: 1em;
+
+        border: 3px solid #ffff;
+
+        &:hover {
+        opacity: .7;
+        } 
+    }
+
+  }
+
+  main {
+      grid-area: main;
+      background-color: #ffff;
+      padding: 2em;
+
+      h1{
+        font-size: 50px;
+      }
+
+      h2 {
+        font-size: 25px;
+          margin-top: -40px;
+          font-weight: lighter;
+            padding: 4px;
+      }
+
+      p {
+          font-size: 18px;
+          padding: 4px;
+      }
+  }
+
+  footer {
+      grid-area: footer;
+      justify-content: center;
+      color: rgb(209, 194, 194);
+      display: flex;
+      align-items: center;     
+      margin-top: -45px;
+      
+     
+      span {
+          color: red;
+          margin: 0 4px;
+      }
+  }
+

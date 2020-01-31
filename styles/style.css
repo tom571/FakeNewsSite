@@ -124,8 +124,8 @@ html {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: 0fr 1fr 1fr 0.4fr;
-      grid-template-rows: 0fr 1fr 1fr 0.4fr;
+  -ms-grid-rows: 0fr 1fr 1fr 0.5fr;
+      grid-template-rows: 0fr 1fr 1fr 0.5fr;
       grid-template-areas: "header header header" "hero hero hero" "main main main" "footer footer footer";
   height: 100vh;
   margin: auto -20px;
@@ -151,6 +151,7 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  padding: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -208,6 +209,7 @@ main {
   background-color: #ffff;
   padding: 2em;
   height: 100vh;
+  overflow: hidden;
 }
 
 main h1 {
@@ -227,6 +229,7 @@ main p {
 }
 
 footer {
+  height: 5vh;
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;

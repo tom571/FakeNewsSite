@@ -17,10 +17,10 @@
 
 <body>
     <div class="grid-container">
-    <div class="nav-container header">
+    <div class="nav-container header" id="nav-container">
         <nav>
             <input type="checkbox" id="nav-toggle">
-            <label for="nav-toggle" class="burger-menu" onclick="burgerAnimate(this)">
+            <label for="nav-toggle" class="burger-menu" onclick="burgerClick(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
@@ -31,19 +31,19 @@
                 <a href="#">About</a>
                 <a href="#">Contact</a>
             </div>
-            <a href="#" class="logo">FAKE NEWS</a>
+            <a href="" class="logo">FAKE NEWS</a>
         </nav>
     </div>
 
         <div class="hero">
             <div class="hero-text">
                 <h1>What the #$@&%*! is <u>fake news</u>?</h1>
-                <button>Find Out</button>
+                <a href="#anchor"><button>Find Out</button></a>
             </div>
         </div>
 
         <main>
-            <h1>Complete Bollocks...😎</h1>
+            <h1 id="anchor" >Complete Bollocks...😎</h1>
             <h2>How to spot it</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip

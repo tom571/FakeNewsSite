@@ -1,21 +1,18 @@
-/*var prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("nav-container").style.top = "0";
-  } else {
-    document.getElementById("nav-container").style.top = "-50px";
-  }
-  prevScrollpos = currentScrollPos;
-} */
 
+const elNavContainer = document.getElementById("nav-container");
+let prevScrollPos = window.pageYOffset;
 
-//const burgerClick = (x) => (x.classlist.toggle('change');
+window.addEventListener("scroll", () => { //using event listener instead of .onscroll as if use .onscroll again will override it
+  elNavContainer.style.display = prevScrollPos > window.pageYOffset ? "block" : "none";
+  prevScrollPos = window.pageYOffset;
+}); 
 
-function burgerAnimate(x) {
+const burgerClick = (x) => x.classList.toggle('change');
+
+//function burgerAnimate(x) {
   
-  x.classList.toggle("change");
+//  x.classList.toggle("change");
 
   //const navBox = document.getElementById('nav-toggle');
   //let navChecked = navBox.checked ? navBox.checked = false : navBox.checked = true;
-}
+//}

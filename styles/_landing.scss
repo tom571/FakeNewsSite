@@ -2,20 +2,22 @@ html {
     background-color: #202226;
     overflow-x: hidden;
     font-family: lato, sans-serif;
+    scroll-behavior: smooth;
 }
+
 
 .grid-container {
     display:grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 0fr 4fr 1fr 0.1fr 0.4fr;
+    grid-template-rows: 0fr 1fr 1fr 0.4fr;
     grid-template-areas: 
     "header header header"
     "hero hero hero"
     "main main main"
     "footer footer footer";
     height: 100vh;
-    margin: -10px;
-    
+    margin: auto -20px;
+
 }
 
 .header {
@@ -23,15 +25,15 @@ html {
 }
 
 .hero {
-    min-height: 50vh; //stops resize malarky 
+    margin-top: -7px;
+    min-height: 100vh; //stops resize malarky
     grid-area: hero;
     background-image: linear-gradient(rgba(53, 57, 61, 0.8), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1552931773-ab388478c964?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"); 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    z-index: -999;
-
+   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,6 +44,10 @@ html {
         font-weight: 100;
         text-align: center;
         text-transform: uppercase;
+    }
+
+    a {
+        text-decoration: none;
     }
 
     button {
@@ -65,8 +71,13 @@ html {
 
         border: 3px solid #ffff;
 
+        transition: .5s ease-in-out;
+        cursor: pointer;
+
         &:hover {
-        opacity: .7;
+        color: black;
+        background-color: white;
+        
         } 
     }
 
@@ -76,6 +87,7 @@ html {
       grid-area: main;
       background-color: #ffff;
       padding: 2em;
+      height: 100vh;
 
       h1{
         font-size: 50px;
@@ -100,9 +112,8 @@ html {
       color: rgb(209, 194, 194);
       display: flex;
       align-items: center;     
-      margin-top: -45px;
       
-     
+      
       span {
           color: red;
           margin: 0 4px;

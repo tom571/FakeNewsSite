@@ -6,6 +6,8 @@
   left: 0;
   position: fixed;
   z-index: 999;
+  -webkit-transition: top 0.3s;
+  transition: top 0.3s;
 }
 
 nav {

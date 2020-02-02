@@ -9,7 +9,7 @@ html {
 .grid-container {
     display:grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 0fr 1fr 1fr 0.5fr;
+    grid-template-rows: 0fr 1fr min-content .5fr;
     grid-template-areas: 
     "header header header"
     "hero hero hero"
@@ -89,7 +89,7 @@ html {
       grid-area: main;
       background-color: #ffff;
       padding: 2em;
-      height: 100vh;
+      min-height: 100vh;
       overflow: hidden;
 
       h1{

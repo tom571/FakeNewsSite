@@ -1,3 +1,9 @@
+@font-face{
+    font-family:"Museo Sans W01_500";
+    src:url("Fonts/905303/a29947fd-0c53-492b-b2f4-399b01153b30.eot?#iefix");
+    src:url("Fonts/905303/a29947fd-0c53-492b-b2f4-399b01153b30.eot?#iefix") format("eot"),url("Fonts/905303/d9896899-f08c-4750-a874-a9e10d83c2cb.woff2") format("woff2"),url("Fonts/905303/d42dd843-62b0-4623-8855-d5882512c3c9.woff") format("woff"),url("Fonts/905303/6d532ccb-086c-4000-bab2-5d16862fcf01.ttf") format("truetype");
+}
+
 html {
     background-color: #202226;
     overflow-x: hidden;
@@ -42,11 +48,21 @@ html {
     align-items: center;
 
     h1 {
-        font-size: 2.5em;
+        font-size: 5em;
+        letter-spacing: -2;
         color: #ffff;
-        font-weight: 100;
+        font-weight: 700;
         text-align: center;
         text-transform: uppercase;
+        font-family: "Museo Sans W01_500";
+
+        span {
+            color: #E1382D;
+        }
+
+        @media only screen and (max-width: 1025px) {
+                font-size: 3.5em;
+        }
     }
 
     a {
@@ -124,4 +140,6 @@ html {
           margin: 0 4px;
       }
   }
+
+
 

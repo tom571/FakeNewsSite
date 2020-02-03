@@ -108,11 +108,12 @@ main {
     grid-area: main;
     background-color: #ffff;
     padding: 2em;
+    padding-top: 0px;
     min-height: 100vh;
     overflow: hidden;
 
     h1 {
-        font-size: 40px;
+        font-size: 2.5em;
         text-transform: uppercase;
     }
 
@@ -123,16 +124,26 @@ main {
         height: 4px;
         width: 80px;
         background-image: linear-gradient(to right, $primary 50%,orange);
-        
-
     }
 
     h2 {
-        font-size: 25px;
+        font-size: 1.5em;
         font-weight: lighter;
         padding: 2px;
         margin-top: 10px;
         margin-top: 10px;
+    }
+
+    @media only screen and (max-width: 1025px) {
+        h1 {
+        font-size: 1.5em;
+        }
+        h2 {
+        font-size: 1.3em;
+        }
+        #underline{
+            margin-top: 0px;
+        }
     }
 
     p {

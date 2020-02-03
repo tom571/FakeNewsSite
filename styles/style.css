@@ -49,6 +49,10 @@ nav {
   transform: rotate(45deg) translate(-8px, -8px);
 }
 
+.burger-menu {
+  width: 40px;
+}
+
 .left-menu {
   -ms-grid-column: 1;
   grid-column: 1;
@@ -68,6 +72,7 @@ nav {
   letter-spacing: 0.5px;
   color: white;
   padding: 10px;
+  width: 40px;
 }
 
 .left-menu a:hover {
@@ -230,12 +235,13 @@ main {
   grid-area: main;
   background-color: #ffff;
   padding: 2em;
+  padding-top: 0px;
   min-height: 100vh;
   overflow: hidden;
 }
 
 main h1 {
-  font-size: 40px;
+  font-size: 2.5em;
   text-transform: uppercase;
 }
 
@@ -250,11 +256,23 @@ main #underline {
 }
 
 main h2 {
-  font-size: 25px;
+  font-size: 1.5em;
   font-weight: lighter;
   padding: 2px;
   margin-top: 10px;
   margin-top: 10px;
+}
+
+@media only screen and (max-width: 1025px) {
+  main h1 {
+    font-size: 1.5em;
+  }
+  main h2 {
+    font-size: 1.3em;
+  }
+  main #underline {
+    margin-top: 0px;
+  }
 }
 
 main p {

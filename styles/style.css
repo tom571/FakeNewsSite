@@ -154,8 +154,8 @@ html {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: hero;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(53, 57, 61, 0.8)), to(rgba(0, 0, 0, 0.5))), url("https://images.unsplash.com/photo-1552931773-ab388478c964?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
-  background-image: linear-gradient(rgba(53, 57, 61, 0.8), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1552931773-ab388478c964?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(53, 57, 61, 0.8)), to(rgba(0, 0, 0, 0.5))), url("../res/protest.jpg");
+  background-image: linear-gradient(rgba(53, 57, 61, 0.8), rgba(0, 0, 0, 0.5)), url("../res/protest.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -235,14 +235,26 @@ main {
 }
 
 main h1 {
-  font-size: 50px;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+main #underline {
+  display: block;
+  margin-top: -20px;
+  margin-left: 2px;
+  height: 4px;
+  width: 80px;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #E1382D), to(orange));
+  background-image: linear-gradient(to right, #E1382D 50%, orange);
 }
 
 main h2 {
   font-size: 25px;
-  margin-top: -40px;
   font-weight: lighter;
-  padding: 4px;
+  padding: 2px;
+  margin-top: 10px;
+  margin-top: 10px;
 }
 
 main p {

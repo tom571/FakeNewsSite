@@ -1,7 +1,9 @@
-@font-face{
-    font-family:"Museo Sans W01_500";
-    src:url("Fonts/905303/a29947fd-0c53-492b-b2f4-399b01153b30.eot?#iefix");
-    src:url("Fonts/905303/a29947fd-0c53-492b-b2f4-399b01153b30.eot?#iefix") format("eot"),url("Fonts/905303/d9896899-f08c-4750-a874-a9e10d83c2cb.woff2") format("woff2"),url("Fonts/905303/d42dd843-62b0-4623-8855-d5882512c3c9.woff") format("woff"),url("Fonts/905303/6d532ccb-086c-4000-bab2-5d16862fcf01.ttf") format("truetype");
+$primary: #E1382D;
+
+@font-face {
+    font-family: "Museo Sans W01_500";
+    src: url("Fonts/905303/a29947fd-0c53-492b-b2f4-399b01153b30.eot?#iefix");
+    src: url("Fonts/905303/a29947fd-0c53-492b-b2f4-399b01153b30.eot?#iefix") format("eot"), url("Fonts/905303/d9896899-f08c-4750-a874-a9e10d83c2cb.woff2") format("woff2"), url("Fonts/905303/d42dd843-62b0-4623-8855-d5882512c3c9.woff") format("woff"), url("Fonts/905303/6d532ccb-086c-4000-bab2-5d16862fcf01.ttf") format("truetype");
 }
 
 html {
@@ -13,14 +15,14 @@ html {
 
 
 .grid-container {
-    display:grid;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 0fr 1fr min-content .5fr; //min-content fixes malarky with the content, pretty cooool
-    grid-template-areas: 
-    "header header header"
-    "hero hero hero"
-    "main main main"
-    "footer footer footer";
+    grid-template-areas:
+        "header header header"
+        "hero hero hero"
+        "main main main"
+        "footer footer footer";
     height: 100vh;
     margin: auto -20px;
 
@@ -34,7 +36,7 @@ html {
     margin-top: -7px;
     min-height: 100vh; //stops resize malarky
     grid-area: hero;
-    background-image: linear-gradient(rgba(53, 57, 61, 0.8), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1552931773-ab388478c964?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"); 
+    background-image: linear-gradient(rgba(53, 57, 61, 0.8), rgba(0, 0, 0, 0.5)), url("../res/protest.jpg");
     background-attachment: fixed; //creates parallax effect
     background-position: center;
     background-repeat: no-repeat;
@@ -42,7 +44,7 @@ html {
     position: relative;
 
     padding: 1em;
-   
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,11 +59,11 @@ html {
         font-family: "Museo Sans W01_500";
 
         span {
-            color: #E1382D;
+            color: $primary;
         }
 
         @media only screen and (max-width: 1025px) {
-                font-size: 3.5em;
+            font-size: 3.5em;
         }
     }
 
@@ -74,13 +76,13 @@ html {
         width: 30%;
 
         background-color: Transparent;
-        
+
         /* Padding and margins */
         padding: 1em;
         margin-top: 50px;
         margin-left: auto;
         margin-right: auto;
-        
+
         color: white;
         text-decoration: none;
         text-transform: uppercase;
@@ -94,52 +96,62 @@ html {
         cursor: pointer;
 
         &:hover {
-        color: black;
-        background-color: white;
-        
-        } 
+            color: black;
+            background-color: white;
+
+        }
     }
 
-  }
+}
 
-  main {
-      grid-area: main;
-      background-color: #ffff;
-      padding: 2em;
-      min-height: 100vh;
-      overflow: hidden;
+main {
+    grid-area: main;
+    background-color: #ffff;
+    padding: 2em;
+    min-height: 100vh;
+    overflow: hidden;
 
-      h1{
-        font-size: 50px;
-      }
+    h1 {
+        font-size: 40px;
+        text-transform: uppercase;
+    }
 
-      h2 {
+    #underline {
+        display: block;
+        margin-top: -20px;
+        margin-left: 2px;
+        height: 4px;
+        width: 80px;
+        background-image: linear-gradient(to right, $primary 50%,orange);
+        
+
+    }
+
+    h2 {
         font-size: 25px;
-          margin-top: -40px;
-          font-weight: lighter;
-            padding: 4px;
-      }
+        font-weight: lighter;
+        padding: 2px;
+        margin-top: 10px;
+        margin-top: 10px;
+    }
 
-      p {
-          font-size: 18px;
-          padding: 4px;
-      }
-  }
+    p {
+        font-size: 18px;
+        padding: 4px;
+    }
+}
 
-  footer {
-      height: 5vh;
-      grid-area: footer;
-      justify-content: center;
-      color: rgb(209, 194, 194);
-      display: flex;
-      align-items: center;     
-      
-      
-      span {
-          color: red;
-          margin: 0 4px;
-      }
-  }
+footer {
+    height: 5vh;
+    grid-area: footer;
+    justify-content: center;
+    color: rgb(209, 194, 194);
+    display: flex;
+    align-items: center;
 
 
-
+    span {
+        color: red;
+        margin: 0 4px;
+    }
+}

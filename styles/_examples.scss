@@ -18,12 +18,11 @@
 .exampleContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: min-content min-content min-content;
     grid-template-areas:
         "card1 info1"
         "info2 card2"
         "card3 info3";
-    height: 100vh;
     row-gap: 2em;
     margin-bottom: 3em;
 
@@ -130,5 +129,21 @@
 
     #info3 {
         grid-area: info3;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .exampleContainer{
+        display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(autofit, min-content);
+    grid-template-areas:
+        "card1"
+        "info1"
+        "card2"
+        "info2" 
+        "card3"
+        "info3";
+    row-gap: 2em;
+    margin-bottom: 3em;
     }
 }

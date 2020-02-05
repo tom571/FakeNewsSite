@@ -695,10 +695,10 @@ footer span:hover {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+  -ms-grid-rows: min-content min-content min-content;
+      grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content;
+      grid-template-rows: min-content min-content min-content;
       grid-template-areas: "card1 info1" "info2 card2" "card3 info3";
-  height: 100vh;
   row-gap: 2em;
   margin-bottom: 3em;
 }
@@ -839,5 +839,20 @@ footer span:hover {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: info3;
+}
+
+@media only screen and (max-width: 550px) {
+  .exampleContainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (min-content)[autofit];
+        grid-template-rows: repeat(autofit, -webkit-min-content);
+        grid-template-rows: repeat(autofit, min-content);
+        grid-template-areas: "card1" "info1" "card2" "info2"  "card3" "info3";
+    row-gap: 2em;
+    margin-bottom: 3em;
+  }
 }
 /*# sourceMappingURL=style.css.map */

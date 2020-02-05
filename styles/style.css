@@ -508,7 +508,7 @@ main .front #top3 {
   }
 }
 
-.secondary {
+.examples {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
@@ -519,7 +519,7 @@ main .front #top3 {
   text-align: center;
 }
 
-.secondary .colour-block {
+.examples .colour-block {
   background-image: url(https://images.unsplash.com/photo-1485056981035-7a565c03c6aa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);
   background-attachment: fixed;
   background-position: center;
@@ -531,7 +531,7 @@ main .front #top3 {
   color: #fff;
 }
 
-.secondary h1 {
+.examples h1 {
   font-size: 2.5em;
   text-transform: uppercase;
   padding: 0 1em;
@@ -560,22 +560,11 @@ footer span {
   margin: 0 4px;
 }
 
-@media screen and (min-width: 550px) {
-  footer span:hover {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-@media screen and (max-width: 550px) {
-  footer span:active {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
+footer span:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .quizContainer {
@@ -699,5 +688,85 @@ footer span {
   .quizContainer .questionContainer .buttons #next {
     padding-left: 0.75em;
   }
+}
+
+.exampleContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas: "card1 info1" "info2 card2" "card3 info3";
+  height: 100vh;
+  row-gap: 2em;
+  margin-bottom: 3em;
+}
+
+.exampleContainer .card {
+  position: relative;
+  border: 3px solid black;
+  border-radius: 10px 0 0 10px;
+  width: 75%;
+  margin-left: 25%;
+}
+
+.exampleContainer #card1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: card1;
+}
+
+.exampleContainer #card1:hover ~ #info1 {
+  visibility: visible;
+}
+
+.exampleContainer #card2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: card2;
+  margin-left: 0;
+  border-radius: 0 10px 10px 0;
+}
+
+.exampleContainer #card2:hover ~ #info2 {
+  visibility: visible;
+}
+
+.exampleContainer #card3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: card3;
+}
+
+.exampleContainer #card3:hover ~ #info3 {
+  visibility: visible;
+}
+
+.exampleContainer .info {
+  border: 3px solid lightblue;
+  width: 75%;
+  border-radius: 0 10px 10px 0;
+  visibility: hidden;
+}
+
+.exampleContainer #info1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: info1;
+}
+
+.exampleContainer #info2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: info2;
+  margin-left: 25%;
+  border-radius: 10px 0 0 10px;
+}
+
+.exampleContainer #info3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: info3;
 }
 /*# sourceMappingURL=style.css.map */

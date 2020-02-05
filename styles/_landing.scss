@@ -1,3 +1,4 @@
+@import './variables';
 @font-face {
     font-family: "Museo Sans W01_500";
     src: url("Fonts/905303/a29947fd-0c53-492b-b2f4-399b01153b30.eot?#iefix");
@@ -6,7 +7,7 @@
 
 html {
     background-color: $secondary;
-    overflow-x: hidden;  
+    overflow-x: hidden;
     font-family: $secondaryFont;
     scroll-behavior: smooth;
 }
@@ -115,7 +116,7 @@ html {
         }
     }
 
-    
+
 }
 
 .underlineHeading {
@@ -378,7 +379,7 @@ main {
 
 
 
-.secondary {
+.examples {
     grid-area: secondary;
     background-color: #ffff;
     padding-top: 0px;
@@ -418,18 +419,12 @@ footer {
     span {
         color: red;
         margin: 0 4px;
-        @media screen and (min-width: 550px) {
+
         &:hover {
             transform: rotate(360deg);
             transition: 1s;
         }
-    }
-        @media screen and (max-width: 550px) {
-            &:active {
-                transform: rotate(360deg);
-                transition: 1s;
-            }
-            
-        }
+
+
     }
 }

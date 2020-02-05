@@ -1,0 +1,71 @@
+@mixin hoverOver($infonumber){
+    &:hover ~ #{$infonumber}{
+        visibility: visible;    
+    }
+}
+
+ 
+
+.exampleContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        "card1 info1"
+        "info2 card2"
+        "card3 info3";
+    height: 100vh;
+    row-gap: 2em;
+    margin-bottom: 3em;
+
+    .card {
+        position: relative;
+        border: 3px solid black;
+        border-radius: 10px 0 0 10px;
+        width: 75%;
+        margin-left: 25%;
+    }
+
+    #card1 {
+        grid-area: card1;
+        @include hoverOver("#info1");
+        
+    }
+
+    #card2 {
+        grid-area: card2;
+        margin-left: 0;
+        border-radius: 0 10px 10px 0;
+        @include hoverOver("#info2");
+        
+    }
+
+    #card3 {
+        grid-area: card3;
+        @include hoverOver("#info3");
+    }
+
+
+    .info {
+        border: 3px solid lightblue;
+        width: 75%;
+        border-radius: 0 10px 10px 0;
+        visibility: hidden;
+
+    }
+
+    #info1 {
+        grid-area: info1;        
+    }
+
+    #info2 {
+        grid-area: info2;
+        margin-left: 25%;
+        border-radius: 10px 0 0 10px;
+    }
+
+    #info3 {
+        grid-area: info3;
+    }
+
+}

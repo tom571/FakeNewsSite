@@ -1,10 +1,3 @@
-$primary: #E1382D;
-$secondary: #202226;
-$primaryFont: "Museo Sans W01_500";
-$secondaryFont: lato,
-sans-serif;
-$mediaWidth: 1250px;
-
 @font-face {
     font-family: "Museo Sans W01_500";
     src: url("Fonts/905303/a29947fd-0c53-492b-b2f4-399b01153b30.eot?#iefix");
@@ -122,124 +115,7 @@ html {
         }
     }
 
-    .quizContainer {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 5fr;
-        grid-template-areas:
-            "qHeader"
-            "qQuestion";
-        width: 60vw;
-        height: 450px;
-        min-width: 540px;
-        border: 4px solid;
-        background-color: $secondary;
-        text-align: center;
-
-        @media only screen and (max-width: 550px) {
-            min-width: 300px;
-            width: 350px;
-        }
-
-        .qHeader {
-            grid-area: qHeader;
-
-            h2 {
-                display: inline-block;
-                border: 3px solid black;
-                text-align: center;
-                padding: 0.25em 1em;
-                color: white;
-                background-color: #34363a;
-                font-size: 28px;
-                letter-spacing: 0.15em;
-                width: 45vw;
-                min-width: 405px;
-
-                @media only screen and (max-width: 550px) {
-                    min-width: 300px;
-                    width: 320px;
-                }
-
-
-            }
-        }
-
-        .questionContainer {
-            grid-area: qQuestion;
-            display: inline-block;
-            min-width: 405px;
-            width: 45vw;
-            height: 70%;
-            border: 3px solid black;
-            text-align: center;
-            padding: 0.25em 1em;
-            color: white;
-            background-color: #34363a;
-
-            @media only screen and (max-width: 550px) {
-                min-width: 300px;
-                width: 320px;
-            }
-
-
-
-            h3 {
-                margin-top: 0.3em;
-                font-size: 22px;
-                letter-spacing: 0.15em;
-            }
-
-            .errorbox {
-                margin-top: -1.1em;
-            }
-
-            .options {
-                margin: -1em 1em;
-                text-align: left;
-                height: 60%;
-                line-height: 3em;
-                font-size: 18px;
-                letter-spacing: 0.075em;
-
-                input[type=radio] {
-                    width: 3em;
-                }
-            }
-
-            .buttons {
-                display: inline-block;
-                text-align: center;
-                height: 20%;
-                width: 90%;
-                margin-top: 1.5em;
-
-                #back {
-                    margin: 0;
-                    float: left;
-                }
-
-                #next {
-                    margin: 0;
-                    float: right;
-                }
-
-                #close {
-
-                    margin: 0;
-                }
-
-                @media only screen and (max-width: 550px) {
-
-                    #back,
-                    #next {
-                        padding-left: 0.75em;
-                    }
-                }
-            }
-        }
-
-    }
+    
 }
 
 .underlineHeading {
@@ -542,10 +418,18 @@ footer {
     span {
         color: red;
         margin: 0 4px;
-
+        @media screen and (min-width: 550px) {
         &:hover {
             transform: rotate(360deg);
             transition: 1s;
+        }
+    }
+        @media screen and (max-width: 550px) {
+            &:active {
+                transform: rotate(360deg);
+                transition: 1s;
+            }
+            
         }
     }
 }

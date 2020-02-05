@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <link href="quiz.css" rel="stylesheet" type="text/css"></link> -->
+        <script src="quiz.js"></script>
+    </head>
+    <body onload="onLoad()">
+        <div id="container">
+            <div class="quizbox">
+                <label style="text-align: left;" id="score"></label>
+                <div class="errorbox" id="error" hidden="true"><label style="color: red;">Select an answer before submitting</label></div>
+                <h1 id="head">Question 1</h1>
+                <p id="question">
+                    Lorem ipsum...
+                </p>
+                <form>
+                    <p><input id="answer1" name="answer" type="radio"><label id="answer1label">Answer 1</label></p>
+                    <p><input id="answer2" name="answer" type="radio"><label id="answer2label">Answer 2</label></p>
+                </form>
+                <p><button id="submit" onclick="javascript:submit()">Submit</button></p>
+                <p style="text-align: right;"><button id="back" hidden="true" onclick="javascript:back()">Back</button></p>
+            </div>
+        </div>
+    </body>
+</html>

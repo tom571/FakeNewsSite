@@ -3,15 +3,16 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js">
+<html class="no-js" lang="en">
 <!--<![endif]-->
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/quiz.css">
     <link rel="apple-touch-icon" sizes="180x180" href="res/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="res/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="res/icons/favicon-16x16.png">
@@ -31,26 +32,63 @@
                     <div class="bar3"></div>
                 </label>
                 <div class="left-menu">
-                    <a href="#">Shop</a>
-                    <a href="#">Blog</a>
-                    <a href="#">About</a>
-                    <a href="#">Quiz</a>
+                    <a title="Back to top" href="/index.html">Home</a>
+                    <a href="#Spotting-Fake-News">How to spot it</a>
+                    <a href="#Examples">Examples</a>
+                    <a href="#" title="Play Quiz" onclick="showQuiz()">Quiz</a>
                 </div>
-                <a href="https://www.donaldjtrump.com/" target="_blank" class="logo">FAKE NEWS</a>
+                <a class="logo">FAKE NEWS</a>
             </nav>
         </div>
 
         <div class="hero">
+            <div style="display: none;" class="quizContainer transition" id="temporary">
+                <div class="qHeader">
+                    <h2 id="qHead">Question</h2>
+                </div>
+                <div id="questionsContainer" class="questionContainer">
+                    <h3 id="qQuestion">What is fake news?</h3>
+                    <div class="errorbox" hidden="true" id="error"><label style="color: red;">Select an answer before
+                            submitting</label></div>
+                    <div class="options">
+                        <div>
+                            <input id="answer1" name="answer" type="radio"><label id="answer1label">Answer 1</label>
+                        </div>
+                        <div>
+                            <input id="answer2" name="answer" type="radio"><label id="answer2label">Answer 2</label>
+                        </div>
+                        <div>
+                            <input id="answer3" name="answer" type="radio"><label id="answer3label">Answer 3</label>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button id="back" onclick="javascript:back()">Back</button>
+                        <button id="close" style="display: none" onclick="javascript:closeQuiz()">Close</button>
+                        <button id="next" onclick="javascript:nextQuestion()">Next</button>
+                    </div>
+                </div>
+
+            </div>
+
             <div class="hero-text">
                 <h1>What the #$@&% is <br> <span>fake news?</span></h1>
-                <a href="#anchor"><button>Find Out</button></a>
+                <a href="#definition"><button>Find Out</button></a>
             </div>
         </div>
 
-        <main id="anchor">
-            <h1> Complete Bollocks</h1>
-            <div id="underline"></div>
-            <h2>How to spot it</h2>
+        <main  id="definition">
+            <h1>What is Fake News?</h1>
+            <div class="underlineHeading"></div>
+
+            <div class="definition">
+                <h3>Definition</h3>
+                <q>False stories that appear to be news, spread on the internet or using other media, usually created to
+                    influence political views or as a joke.</q> <br> <img class="cambridgeImg" src="res/cambridge.png">
+
+            </div>
+
+            <h1 id="Spotting-Fake-News"> How to spot it</h1>
+            <div class="underlineHeading"></div>
 
             <div id="cardContainer">
                 <div class="column">
@@ -63,11 +101,11 @@
                                     <h2>Consider the Source</h2>
                                     <h3>Investigate more</h3>
                                     <label>Tap here</label>
-                                    <p>Fake news is when someone is speaking a load of crap, abit like this article that
-                                        you are currently reading. The text whilst looks meaningful, and contains
-                                        lengthy words holds no actual value to anyone for any reason. Fake news is when someone is speaking a load of crap, abit like this article that
-                                        you are currently reading. The text whilst looks meaningful, and contains
-                                        lengthy words holds no actual value to anyone for any reason. </p>                                   
+                                    <p>Click away from the story to investigate the site, its mission and its contact
+                                        info.</p><br>
+                                    <h3>Check the Author</h3>
+                                    <p>Do a quick search on the author. Find out if they are credible, and if they are
+                                        real. </p>
                                 </div>
                             </div>
                         </div>
@@ -82,14 +120,14 @@
                                 <div id="top2" class="top">
                                 </div>
                                 <div id="middle2" class="middle">
-                                    <h2>Consider the Source</h2>
+                                    <h2>Read Beyond</h2>
                                     <h3>Investigate more</h3>
                                     <label>Tap here</label>
-                                    <p>Fake news is when someone is speaking a load of crap, abit like this article that
-                                        you are currently reading. The text whilst looks meaningful, and contains
-                                        lengthy words holds no actual value to anyone for any reason. Fake news is when someone is speaking a load of crap, abit like this article that
-                                        you are currently reading. The text whilst looks meaningful, and contains
-                                        lengthy words holds no actual value to anyone for any reason. </p>
+                                    <p>Headlines can be outrageous in an effort to get clicks. Make sure you read the
+                                        whole story, to get a better picture.</p><br>
+                                    <h3>Look for Supporting Sources</h3>
+                                    <p>Click on those links. Determine if the information given actually supports the
+                                        story</p>
                                 </div>
                             </div>
                         </div>
@@ -103,14 +141,14 @@
                                 <div id="top3" class="top">
                                 </div>
                                 <div id="middle3" class="middle">
-                                    <h2>Consider the Source</h2>
+                                    <h2>Check The Date</h2>
                                     <h3>Investigate more</h3>
                                     <label>Tap here</label>
-                                    <p>Fake news is when someone is speaking a load of crap, abit like this article that
-                                        you are currently reading. The text whilst looks meaningful, and contains
-                                        lengthy words holds no actual value to anyone for any reason. Fake news is when someone is speaking a load of crap, abit like this article that
-                                        you are currently reading. The text whilst looks meaningful, and contains
-                                        lengthy words holds no actual value to anyone for any reason. </p>
+                                    <p>Reposting old news stories doesn't mean they're relevant to current events</p>
+                                    <br>
+                                    <h3>Is it a Joke?</h3>
+                                    <p>If it is too outlandish, it might be satire. Make sure to research the site and
+                                        author to be sure.</p>
                                 </div>
                             </div>
                         </div>
@@ -118,17 +156,20 @@
 
                 </div>
             </div>
-        </main>
-
-        <section class="secondary">
 
             <div class="colour-block">
 
             </div>
 
-            <h1>Complete Bollocks</h1>
-            <div id="underline"></div>
+        </main>
 
+        <section class="secondary">
+
+            <div class="colour-block">
+            </div>
+            <h1 id="Examples">Examples of Fake News</h1>
+            <div class="underlineHeading"></div>
+            
 
         </section>
 
@@ -138,6 +179,7 @@
 
 
     <script src="scripts.js" async defer></script>
-</body>
+    <script src="quiz.js" async defer></script>
 
+</body>
 </html>

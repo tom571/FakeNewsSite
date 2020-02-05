@@ -1,11 +1,20 @@
-@mixin hoverOver($infonumber){
-    &:hover ~ #{$infonumber}{
-        visibility: visible;    
+@mixin slider($infoNumber, $value) {
+    &:hover~#{$infoNumber} {
+        .overlay {
+            width: 0;
+            margin-left: #{$value};
+        }
     }
 }
 
- 
-
+@mixin buttonEffect {
+    &:hover {
+        h2 {
+            color: black;
+            background-color: white;
+        }
+    }
+}
 .exampleContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -19,53 +28,107 @@
     margin-bottom: 3em;
 
     .card {
+        @include buttonEffect;
         position: relative;
-        border: 3px solid black;
-        border-radius: 10px 0 0 10px;
+        border-radius: 15px 0 0 15px;
         width: 75%;
         margin-left: 25%;
+        box-shadow: -10px 0 25px -8px $secondary;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        h2 {
+            color: white;
+            text-transform: uppercase;
+            border: 3px solid white;
+            padding: 0.5em 1em;
+            transition: 0.5s ease-in-out;
+        }
     }
 
     #card1 {
         grid-area: card1;
-        @include hoverOver("#info1");
-        
+        @include slider('#info1', '100%');
+        background-image: linear-gradient(rgba(53, 57, 61, 0.6), rgba(53, 57, 61, 0.5)), url('https://images.unsplash.com/photo-1575468130797-aa950b68aeec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+        background-size: cover;
+
+
+
     }
 
     #card2 {
         grid-area: card2;
         margin-left: 0;
-        border-radius: 0 10px 10px 0;
-        @include hoverOver("#info2");
-        
+        border-radius: 0 15px 15px 0;
+        @include slider('#info2', '0%');
+        box-shadow: 10px 0 25px -8px $secondary;
+        background-image: linear-gradient(rgba(53, 57, 61, 0.6), rgba(53, 57, 61, 0.5)), url('https://images.unsplash.com/photo-1519074031893-210d39bd3885?ixlib=rb-1.2.1&auto=format&fit=crop&w=1483&q=80');
+        background-size: cover;
+
     }
 
     #card3 {
         grid-area: card3;
-        @include hoverOver("#info3");
+        @include slider('#info3', '100%');
+        background-image: linear-gradient(rgba(53, 57, 61, 0.6), rgba(53, 57, 61, 0.5)), url('https://images.unsplash.com/photo-1571842705650-728fd132c62f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+        background-size: cover;
     }
 
-
     .info {
-        border: 3px solid lightblue;
+        position: relative;
         width: 75%;
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            transition: 0.7s ease;
+
+        }
+    }
+
+    .example {
         border-radius: 0 10px 10px 0;
-        visibility: hidden;
+        height: 100%;
+        background-color: $tertiary;
+        color: white;
+        padding: 1.5em 1em;
+
+        h2{
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;            
+        }
+        p{
+            text-align: left;
+        }
 
     }
 
     #info1 {
-        grid-area: info1;        
+        grid-area: info1;
     }
 
     #info2 {
         grid-area: info2;
         margin-left: 25%;
-        border-radius: 10px 0 0 10px;
+        border-radius: 0 10px 10px 0;
+
+        #example2 {
+            border-radius: 10px 0 0 10px;
+            
+        }
     }
 
     #info3 {
         grid-area: info3;
     }
-
 }

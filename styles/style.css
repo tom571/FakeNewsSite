@@ -173,8 +173,8 @@ html {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: hero;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(53, 57, 61, 0.8)), to(rgba(0, 0, 0, 0.5))), url("../res/protest.jpg");
-  background-image: linear-gradient(rgba(53, 57, 61, 0.8), rgba(0, 0, 0, 0.5)), url("../res/protest.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(53, 57, 61, 0.8)), to(rgba(0, 0, 0, 0.5))), url("https://foreignpolicy.com/wp-content/uploads/2019/11/GettyImages-1181722056.jpg");
+  background-image: linear-gradient(rgba(53, 57, 61, 0.8), rgba(0, 0, 0, 0.5)), url("https://foreignpolicy.com/wp-content/uploads/2019/11/GettyImages-1181722056.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

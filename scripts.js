@@ -9,14 +9,6 @@ window.addEventListener("scroll", () => { //using event listener instead of .ons
 
 const burgerClick = (x) => x.classList.toggle('change');
 
-//function burgerAnimate(x) {
-
-//  x.classList.toggle("change");
-
-//const navBox = document.getElementById('nav-toggle');
-//let navChecked = navBox.checked ? navBox.checked = false : navBox.checked = true;
-//}
-
 function showQuiz() {
   let hero = document.getElementsByClassName("hero-text");
   Array.from(hero).forEach(e =>e.style.display = "none");

@@ -1,12 +1,13 @@
 .quizContainer {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 1fr min-content;
     grid-template-areas:
         "qHeader"
         "qQuestion";
     width: 60vw;
-    height: 450px;
+    min-height: 450px;
+    padding: 1em;
     min-width: 540px;
     border: 4px solid;
     background-color: $secondary;
@@ -28,7 +29,7 @@
             color: white;
             background-color: #34363a;
             font-size: 28px;
-            letter-spacing: 0.15em;
+            letter-spacing: 0.1em;
             width: 45vw;
             min-width: 405px;
 
@@ -46,7 +47,7 @@
         display: inline-block;
         min-width: 405px;
         width: 45vw;
-        height: 70%;
+        min-height: 70%;
         border: 3px solid black;
         text-align: center;
         padding: 0.25em 1em;
@@ -63,7 +64,7 @@
         h3 {
             margin-top: 0.3em;
             font-size: 22px;
-            letter-spacing: 0.15em;
+            letter-spacing: 0.05em;
         }
 
         .errorbox {
@@ -76,7 +77,6 @@
             height: 60%;
             line-height: 3em;
             font-size: 18px;
-            letter-spacing: 0.075em;
 
             input[type=radio] {
                 width: 3em;

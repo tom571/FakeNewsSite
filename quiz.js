@@ -1,33 +1,42 @@
 var questions = [{
     head: "Question 1",
-    question: "What is my name?",
-    answer1: "11",
-    answer2: "12",
-    answer3: "13",
+    question: "Should you always trust a headline?",
+    answer1: "Never",
+    answer2: "Always",
+    answer3: "Only if not exaggerated",
     answer: 1,
     useranswer: 0
 }, {
     head: "Question 2",
-    question: "How am I feeling?",
-    answer1: "21",
-    answer2: "22",
-    answer3: "23",
-    answer: 2,
+    question: "Which source is least trustworthy for a medical article?",
+    answer1: "Dr Aaron Adams, a private doctor from America",
+    answer2: "Mr Derek Baum, a construction worker",
+    answer3: "Dr Liu Lei, an NHS doctor",
+    answer: 3,
     useranswer: 0
 }, {
     head: "Question 3",
-    question: "Why am I?",
-    answer1: "31",
-    answer2: "32",
-    answer3: "33",
-    answer: 2,
+    question: "What would you do if you find fake news?",
+    answer1: "Open the link and write insults in the comments",
+    answer2: "Open the link and then share it on social media to raise awareness",
+    answer3: "Ignore the link and move on",
+    answer: 3,
     useranswer: 0
 }, {
     head: "Question 4",
-    question: "What's the point?",
-    answer1: "dunno",
-    answer2: "isnt any",
-    answer3: "die",
+    question: "Why is fake news dangerous?",
+    answer1: "It spreads missinformation to influence a person's views",
+    answer2: "It spreads missinformation as a joke, not to be taken seriously",
+    answer3: "It spreads misinformation when real news is considered harmful",
+    answer: 1,
+    useranswer: 0
+},
+    {
+    head: "Question 5",
+    question: "Which is the most obvious way to tell if an article is fake news?",
+    answer1: "The article is hosted on an untrustworthy website",
+    answer2: "The article title seems exagerrated",
+    answer3: "The article contains spelling mistakes, suggesting there was no editing",
     answer: 1,
     useranswer: 0
 }];
